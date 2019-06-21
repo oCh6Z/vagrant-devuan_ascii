@@ -1,15 +1,16 @@
 ## OS junk files
 *.DS_Store
+.DS_Store
+.DS_Store?
+._*
+*~
 
 ## Vagrant
 # General
 .vagrant/
 
 # Log files (if you are creating logs in debug mode, uncomment this)
-# *.logs
+*.logs
 
 ## Vagrant Patch
 *.box
-
-## Emacs
-*~
