@@ -10,3 +10,10 @@ installPyenv () {
     echo 'eval "$(pyenv init -)"' >> ~/.bashrc
     echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 }
+
+funcs=(installPyenv)
+
+for func in "${funcs[@]}"
+do
+    $func || fail $func
+done
