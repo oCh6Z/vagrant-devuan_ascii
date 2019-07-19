@@ -7,5 +7,6 @@ Vagrant.configure(2) do |config|
   config.ssh.password = "toor"
   config.vm.guest = :debian
   config.vm.synced_folder "src/", "/srv/website", disabled: false
+  config.vm.provision "shell", path: "scripts/common.sh"
   config.vm.provision "shell", path: "scripts/init.sh"
 end
