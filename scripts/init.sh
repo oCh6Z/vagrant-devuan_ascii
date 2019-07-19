@@ -7,14 +7,14 @@ fail () {
     exit $FAIL_RC
 }
 
-updateBase () {
+upgradeBase () {
     export DEBIAN_FRONTEND=noninteractive
     apt -y -qq update 2>/dev/null
     apt-mark hold grub-pc openssh-server
     apt -y -qq upgrade 2>/dev/null
 }
 
-funcs=(updateBase)
+funcs=(upgradeBase)
 
 for func in "${funcs[@]}"
 do
