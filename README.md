@@ -1,4 +1,4 @@
-# Vagrant-Devuan ASCII
+# Vagrant - Devuan ASCII & pyenv
 
 ```sh
 $ vagrant up
