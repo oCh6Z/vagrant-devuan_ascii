@@ -14,7 +14,11 @@ upgradeBase () {
     apt -y -qq upgrade 2>/dev/null
 }
 
-funcs=(upgradeBase)
+installVBGuest () {
+    apt -y -qq install --no-install-recommends linux-headers-$(uname -r) build-essential dkms 2>/dev/null
+}
+
+funcs=(upgradeBase installVBGuest)
 
 for func in "${funcs[@]}"
 do
