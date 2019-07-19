@@ -8,7 +8,10 @@ fail () {
 }
 
 updateBase () {
-    apt-get -y -q update
+    export DEBIAN_FRONTEND=noninteractive
+    apt -y -qq update 2>/dev/null
+    apt-mark hold grub-pc openssh-server
+    apt -y -qq upgrade 2>/dev/null
 }
 
 funcs=(updateBase)
