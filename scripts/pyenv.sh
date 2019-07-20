@@ -5,7 +5,7 @@ installPyenv () {
     apt -y -qq install --no-install-recommends libedit-dev 2>/dev/null
     apt -y -qq install --no-install-recommends libssl-dev 2>/dev/null
     apt -y -qq install --no-install-recommends libssl1.0-dev 2>/dev/null
-    curl https://pyenv.run bash 2>/dev/null | bash 2>/dev/null
+    curl --silent https://pyenv.run bash | bash 2>/dev/null
     echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.bashrc
     echo 'eval "$(pyenv init -)"' >> ~/.bashrc
     echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
